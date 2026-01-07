@@ -1,0 +1,57 @@
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Replace the '❯' symbol in the prompt with '➜'
+#[character] # The name of the module we are configuring is 'character'
+#success_symbol = '[➜ ](bold fg:207)' # The 'success_symbol' segment is being set to '➜' with the color 'bold pink'
+
+format = """
+$directory\
+$character"""
+
+[directory]
+truncation_length = 3
+truncate_to_repo = false
+format = "[$path]($style) [❤](bold fg:207) "
+style = "bold cyan"
+
+[character]
+success_symbol = ""
+error_symbol = ""
+
+#====
+
+#[directory]
+#format = "[$path](bold bright-green) [❤](#ff69b4) "
+#
+#[character]
+#disabled = true
+#
+# Disable all other modules
+#[git_branch]
+#disabled = true
+#
+#[git_commit]
+#disabled = true
+#
+#[git_state]
+#disabled = true
+#
+#[git_status]
+#disabled = true
+#
+#[cmd_duration]
+#disabled = true
+#
+# (Optional) Disable other modules you might see
+#[package]
+#disabled = true
+#
+#[python]
+#disabled = true
+#
+#[nodejs]
+#disabled = true
+#
+#[rust]
+#disabled = true
