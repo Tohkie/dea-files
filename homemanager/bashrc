@@ -1,0 +1,11 @@
+eval "$(starship init bash)"
+
+alias eep='systemctl suspend'
+alias hibernate='systemctl hybrid-sleep'
+alias restart='systemctl reboot'
+alias shutdown='systemctl poweroff'
+rebuild() {
+    sudo nixos-rebuild switch --flake ~/dea-files#"$1"
+}
+# alias rebuild='sudo nixos-rebuild switch --flake ~/dea-files'
+[ -f "/home/dea/.ghcup/env" ] && . "/home/dea/.ghcup/env" # ghcup-env

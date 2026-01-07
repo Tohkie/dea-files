@@ -1,0 +1,41 @@
+{
+  description = "release the dea files";
+
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+  };
+
+  outputs = { self, nixpkgs, ... } @ inputs:
+    let
+      system = "x86_64-linux";
+      lib = nixpkgs.lib;
+
+      commonModules = [
+        ./configuration.nix
+        ./user.nix
+      ];
+    in {
+      # laptop
+      nixosConfigurations.nahemah = lib.nixosSystem {
+        specialArgs = { 
+          host = "nahemah";  
+          inherit inputs; 
+        };
+        modules = [
+          ./hosts/nahemah/hardware-configuration.nix
+        ]
+        ++ commonModules;
+      };
+
+
+      # nixosConfigurations.sandalphon = lib.nixosSystem {
+      #   specialArgs = { inherit inputs; };
+      #   modules = [
+      #     ./hosts/sandalphon/hardware-configuration.nix
+      #   ]
+      #   ++ commonModules;
+      # };
+    };
+}
