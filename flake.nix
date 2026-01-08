@@ -7,7 +7,8 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs @ { self, nixpkgs, ... }:
+  outputs =
+    inputs@{ self, nixpkgs, ... }:
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
@@ -16,12 +17,13 @@
         ./configuration.nix
         ./user.nix
       ];
-    in {
+    in
+    {
       # laptop
       nixosConfigurations.nahemah = lib.nixosSystem {
-        specialArgs = { 
-          host = "nahemah";  
-          inherit inputs; 
+        specialArgs = {
+          host = "nahemah";
+          inherit inputs;
         };
         modules = [
           ./hosts/nahemah/hardware-configuration.nix

@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
   # Enables nix commands + flakes
@@ -21,8 +21,7 @@
     syncplay
   ];
 
-  programs.neovim =
-  {};
+  programs.neovim = { };
 
   home.sessionPath = [
     "$HOME/.local/bin"
