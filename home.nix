@@ -19,10 +19,9 @@
     libsForQt5.qt5.qtbase
 
     syncplay
-    
   ];
 
-  programs.neovim = # nvm??
+  programs.neovim =
   {};
 
   home.sessionPath = [
@@ -41,7 +40,6 @@
   programs.bash = {
     enable = true;
     bashrcExtra = builtins.readFile ./homemanager/bashrc;
-    
   };
 
   programs.home-manager.enable = true;

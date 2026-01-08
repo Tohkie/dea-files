@@ -7,7 +7,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, ... } @ inputs:
+  outputs = inputs @ { self, nixpkgs, ... }:
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
@@ -29,7 +29,7 @@
         ++ commonModules;
       };
 
-
+      # pc
       # nixosConfigurations.sandalphon = lib.nixosSystem {
       #   specialArgs = { inherit inputs; };
       #   modules = [
