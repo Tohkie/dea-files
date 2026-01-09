@@ -36,6 +36,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/sandalphon/hardware-configuration.nix
+          ./hosts/sandalphon/configuration.nix
         ]
         ++ commonModules;
       };
