@@ -17,6 +17,7 @@
     libsForQt5.qtstyleplugin-kvantum # libs for Qt5
     libsForQt5.qt5ct
     libsForQt5.qt5.qtbase
+    btop-cuda
 
     syncplay
   ];

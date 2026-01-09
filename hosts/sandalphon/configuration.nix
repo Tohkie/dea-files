@@ -32,8 +32,22 @@ in
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
+  services.flatpak = {
+    enable = true;
+    packages = [
+      {
+        appId = "org.vinegarhq.Sober";
+        origin = "flathub";
+      }
+    ];
+    update.onActivation = true;
+    uninstallUnmanaged = true;
+  };
+
   environment.systemPackages = with pkgs; [
     prismlauncher # minecraft
     waywall # mcsr
+
+    r2modman
   ];
 }
