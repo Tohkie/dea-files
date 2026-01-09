@@ -6,14 +6,15 @@
   ...
 }:
 
+let
+  nvidiaPackage = config.hardware.nvidia.package;
+in
 {
   networking.hostName = lib.mkDefault "sandalphon";
 
   # nvidia drivers
-  hardware.graphics = {
-    enable = true;
-  };
-  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.graphics.enable = true;
+  services.xserver.videoDrivers = lib.mkDefault [ "nvidia" ];
   hardware.nvidia = {
     modesetting.enable = true;
     # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
@@ -23,7 +24,8 @@
     powerManagement.enable = false;
 
     powerManagement.finegrained = false;
-    open = true;
+    # open = true;
+    open = lib.mkOverride 990 (nvidiaPackage ? open && nvidiaPackage ? firmware);
     # Enable the Nvidia settings menu,
     # accessible via `nvidia-settings`.
     nvidiaSettings = true;
