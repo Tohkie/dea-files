@@ -31,13 +31,13 @@
         ++ commonModules;
       };
 
-      # pc
-      # nixosConfigurations.sandalphon = lib.nixosSystem {
-      #   specialArgs = { inherit inputs; };
-      #   modules = [
-      #     ./hosts/sandalphon/hardware-configuration.nix
-      #   ]
-      #   ++ commonModules;
-      # };
+#       pc
+      nixosConfigurations.sandalphon = lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/sandalphon/hardware-configuration.nix
+        ]
+        ++ commonModules;
+      };
     };
 }
