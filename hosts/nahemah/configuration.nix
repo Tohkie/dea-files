@@ -4,7 +4,7 @@
 }:
 
 {
-  networking.hostName = "nahemah";
+  networking.hostName = lib.mkDefault "nahemah";
 
   environment.systemPackages = with pkgs; [
 
