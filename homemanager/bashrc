@@ -12,5 +12,4 @@ rebuild() {
         sudo nixos-rebuild switch --flake ~/dea-files#"$1"
     fi
 }
-# alias rebuild='sudo nixos-rebuild switch --flake ~/dea-files'
 [ -f "/home/dea/.ghcup/env" ] && . "/home/dea/.ghcup/env" # ghcup-env
