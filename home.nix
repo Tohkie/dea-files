@@ -41,5 +41,25 @@
     bashrcExtra = builtins.readFile ./homemanager/bashrc;
   };
 
+  # programs.starship = {
+  #   enable = true;
+  #   settings = {
+  #     add_newline = true;
+
+  #     format = "$directory\n$character";
+
+  #     directory = {
+  #       truncation_length = 3;
+  #       truncate_to_repo = false;
+  #       format = "[$path]($style) [❤](bold fg:#ff5fff) ";
+  #       style = "bold cyan";
+  #     };
+  #     character = {
+  #       success_symbol = "";
+  #       error_symbol = "";
+  #     };
+  #   };
+  # };
+
   programs.home-manager.enable = true;
 }
