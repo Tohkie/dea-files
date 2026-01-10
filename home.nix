@@ -71,7 +71,7 @@ in
   # };
 
   # mcsr credit to uku: https://git.uku3lig.net/uku/flake/src/branch/main/programs/mcsr
-  home.file.dea.source = "/home/dea/.config/waywall/init.lua";
+  home.file.dea.target = ".config/waywall/init.lua";
   home.file.dea.text = ''
     package.path = package.path .. ";${waywork}/?.lua"
     local ninb_path = "${lib.getExe ninjabrain-bot}"
