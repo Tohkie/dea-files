@@ -12,6 +12,7 @@
     prismlauncher # minecraft
     r2modman
     # osu-lazer-bin
+    waywall 
   ];
 
   programs = {
