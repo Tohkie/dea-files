@@ -6,6 +6,8 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    hjem.url = "github:feel-co/hjem";
+    hjem.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -33,12 +35,13 @@
         ++ commonModules;
       };
 
-#       pc
+      # pc
       nixosConfigurations.sandalphon = lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/sandalphon/hardware-configuration.nix
           ./hosts/sandalphon/configuration.nix
+          ./hosts/sandalphon/games.nix
         ]
         ++ commonModules;
       };

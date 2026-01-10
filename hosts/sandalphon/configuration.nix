@@ -45,9 +45,6 @@ in
   };
 
   environment.systemPackages = with pkgs; [
-    prismlauncher # minecraft
-    waywall # mcsr
 
-    r2modman
   ];
 }
