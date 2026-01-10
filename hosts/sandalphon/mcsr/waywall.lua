@@ -115,7 +115,7 @@ ModeManager:define("tall", {
 })
 
 local ensure_ninjabrain = Processes.ensure_application(waywall, ninb_path)("ninjabrain.*\\.jar")
-waywall.listen("load", ensure_ninjabrain)
+-- waywall.listen("load", ensure_ninjabrain)
 
 local config = {
 	input = {

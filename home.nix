@@ -34,6 +34,7 @@
   ];
 
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.overlays = [ (import ./exprs/overlay.nix { }) ];
   imports = [
     ./homemanager/mpv.nix
     ./hosts/sandalphon/mcsr/home.nix
