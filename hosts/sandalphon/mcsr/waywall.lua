@@ -10,7 +10,9 @@ local scene = Scene.SceneManager.new(waywall)
 local ModeManager = Modes.ModeManager.new(waywall)
 
 -- resolution is a magic global
-local thin_w = resolution.h * 0.28
+-- local thin_w = resolution.h * 0.28
+local thin_w = 350
+local thin_h = 1000
 local tall_w = 384
 local tall_h = 16384
 
@@ -29,20 +31,9 @@ local mc_eye_y = (tall_h - mc_eye_h) / 2
 
 -- https://arjuncgore.github.io/waywall-boat-eye-calc/
 -- https://github.com/Esensats/mcsr-calcsens
-local normal_sens = 13.117018998967824
-local tall_sens = 0.88486625532087
+local normal_sens = 3.974841839338015
+local tall_sens = 0.26814045280749516
 
-for _, name in ipairs({ "wide", "thin", "tall" }) do
-	scene:register(name .. "_bg", {
-		kind = "image",
-		path = images[name],
-		options = {
-			dst = { x = 0, y = 0, w = resolution.w, h = resolution.h },
-			depth = -1,
-		},
-		groups = { name },
-	})
-end
 
 local left_middle = (resolution.w - thin_w) / 4
 scene:register("e_counter", {
@@ -50,7 +41,7 @@ scene:register("e_counter", {
 	options = {
 		src = { x = 1 * e_src_scale, y = 37 * e_src_scale, w = e_w, h = e_h },
 		dst = { x = left_middle - (e_w * e_scale / 2), y = resolution.h / 10.8, w = e_w * e_scale, h = e_h * e_scale },
-		depth = 0,
+		depth = 1,
 	},
 	groups = { "thin" },
 })
@@ -68,7 +59,7 @@ scene:register("eye_measure", {
 scene:register("eye_overlay", {
 	kind = "image",
 	path = images.eye_overlay,
-	options = { dst = eye_dst, depth = 1 },
+	options = { dst = eye_dst, depth = 5 },
 	groups = { "tall" },
 })
 
@@ -78,7 +69,7 @@ end
 
 ModeManager:define("thin", {
 	width = thin_w,
-	height = resolution.h,
+	height = thin_h,
 	on_enter = function()
 		scene:enable_group("thin", true)
 	end,
@@ -100,6 +91,7 @@ ModeManager:define("wide", {
 	toggle_guard = mode_guard,
 })
 
+-- eye measuring
 ModeManager:define("tall", {
 	width = tall_w,
 	height = tall_h,
@@ -119,30 +111,35 @@ local ensure_ninjabrain = Processes.ensure_application(waywall, ninb_path)("ninj
 
 local config = {
 	input = {
-		layout = "fr",
+		layout = "us",
 		repeat_rate = 40,
 		repeat_delay = 300,
 
 		sensitivity = normal_sens,
 		confine_pointer = false,
+
+		remaps = {
+			["MB5"] = "F3"
+		},
 	},
 	theme = {
-		background = "#303030ff",
+		-- background = "#303030ff",
+		background_png = os.getenv("HOME") .. "/dea-files/assets/wallpapers/yukata.png",
 		-- https://github.com/Smithay/smithay/issues/1894
 		ninb_anchor = "top",
 	},
 	actions = Keys.actions({
-		["Ctrl-Super-F"] = waywall.toggle_fullscreen,
-		["*-N"] = function()
+		["F11"] = waywall.toggle_fullscreen,
+		["*-B"] = function()
 			return ModeManager:toggle("thin")
 		end,
-		["*-P"] = function()
+		["*-V"] = function()
 			return ModeManager:toggle("tall")
 		end,
 		["*-G"] = function()
 			return ModeManager:toggle("wide")
 		end,
-		["Ctrl-Shift-M"] = function()
+		["*-L"] = function()
 			ensure_ninjabrain()
 			helpers.toggle_floating()
 		end,

@@ -17,9 +17,6 @@ in
     local resolution = { w = ${toString 1920}, h = ${toString 1080} }
     local images = {
       eye_overlay = "${./eye-overlay.png}",
-      thin = "${./yukata.jpg}",
-      wide = "${./yukata.jpg}",
-      tall = "${./yukata.jpg}",
     }
     -- end globals
   ''

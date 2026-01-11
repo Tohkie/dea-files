@@ -24,6 +24,7 @@
     libsForQt5.qt5.qtbase
     btop-cuda
 
+    croc
     syncplay
   ];
 

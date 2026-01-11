@@ -165,6 +165,7 @@
     yt-dlp
 
     bottles # windows emulation
+
   ];
 
   # There have been amdgpu issues in 6.10 so you maybe need to revert on the default lts kernel.
@@ -178,6 +179,11 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
+  };
+
+  services.mullvad-vpn = {
+    enable = true;
+    package = pkgs.mullvad-vpn; # mullvad only has the cli
   };
 
   programs.nix-ld = {
