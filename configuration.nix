@@ -163,6 +163,7 @@
 
     ffmpeg-full
     yt-dlp
+    qbittorrent
 
     bottles # windows emulation
 

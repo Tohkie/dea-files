@@ -1,6 +1,7 @@
 {
   lib,
   pkgs,
+  inputs,
   ...
 }:
 
@@ -39,6 +40,7 @@
   imports = [
     ./homemanager/mpv.nix
     ./hosts/sandalphon/mcsr/home.nix
+    inputs.plasma-manager.homeModules.plasma-manager
   ];
 
   # dconf.settings = {};
@@ -69,6 +71,11 @@
   #     };
   #   };
   # };
+
+  programs.plasma = {
+    enable = true;
+    kwin.edgeBarrier = 50;
+  };
 
   programs.home-manager.enable = true;
 }
