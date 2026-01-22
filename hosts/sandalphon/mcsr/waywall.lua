@@ -31,8 +31,8 @@ local mc_eye_y = (tall_h - mc_eye_h) / 2
 
 -- https://arjuncgore.github.io/waywall-boat-eye-calc/
 -- https://github.com/Esensats/mcsr-calcsens
-local normal_sens = 3.974841839338015
-local tall_sens = 0.26814045280749516
+local normal_sens = 4.699455756166794
+local tall_sens = 0.31702247418659996
 
 
 local left_middle = (resolution.w - thin_w) / 4
@@ -64,7 +64,7 @@ scene:register("eye_overlay", {
 })
 
 function mode_guard()
-	return not waywall.get_key("F3") and waywall.state().screen == "inworld" and waywall.state().inworld == "unpaused"
+	return not waywall.get_key("F3") and waywall.state().screen == "inworld"
 end
 
 ModeManager:define("thin", {
@@ -126,7 +126,7 @@ local config = {
 		-- background = "#303030ff",
 		background_png = os.getenv("HOME") .. "/dea-files/assets/wallpapers/yukata.png",
 		-- https://github.com/Smithay/smithay/issues/1894
-		ninb_anchor = "top",
+		ninb_anchor = "topright",
 	},
 	actions = Keys.actions({
 		["F11"] = waywall.toggle_fullscreen,
