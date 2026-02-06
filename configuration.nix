@@ -123,9 +123,9 @@
   # ======================
   # sudo nixos-rebuild switch --flake .
   environment.systemPackages = with pkgs; [
-    vim
+    # vim
     wget
-    neovim
+    # neovim
     lunarvim
     vscode
     python3

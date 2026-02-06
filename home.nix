@@ -29,7 +29,7 @@
     syncplay
   ];
 
-  programs.neovim = { };
+  # programs.neovim = { };
 
   home.sessionPath = [
     "$HOME/.local/bin"
@@ -39,8 +39,10 @@
   nixpkgs.overlays = [ (import ./exprs/overlay.nix { }) ];
   imports = [
     ./homemanager/mpv.nix
+    ./homemanager/nvf.nix
     ./hosts/sandalphon/mcsr/home.nix
     inputs.plasma-manager.homeModules.plasma-manager
+    inputs.nvf.homeManagerModules.default
   ];
 
   # dconf.settings = {};
