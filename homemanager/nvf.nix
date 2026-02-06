@@ -15,8 +15,7 @@
       vim.theme = {
         enable = true;
         # extraConfig = builtins.readFile ""
-      }
+      };
     };
-
   };
 }
