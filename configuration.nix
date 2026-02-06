@@ -146,6 +146,7 @@
     monophony # yt music tryout
 
     vesktop # discord-canary
+    equibop # equibop 3.1.7
 
     vivaldi # vivaldi install requires qt5
     qt5.qtbase
