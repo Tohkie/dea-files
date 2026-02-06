@@ -123,9 +123,7 @@
   # ======================
   # sudo nixos-rebuild switch --flake .
   environment.systemPackages = with pkgs; [
-    # vim
     wget
-    # neovim
     lunarvim
     vscode
     python3
@@ -176,11 +174,6 @@
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-  };
-
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
   };
 
   services.mullvad-vpn = {
