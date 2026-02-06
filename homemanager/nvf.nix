@@ -12,6 +12,11 @@
       vim.lsp = {
         enable = true;
       };
+      vim.theme = {
+        enable = true;
+        # extraConfig = builtins.readFile ""
+      }
     };
+
   };
 }
