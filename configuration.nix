@@ -133,7 +133,7 @@
     git
     gdb
     glibc.static
-    nixfmt-rfc-style
+    nixfmt
 
     kitty # terminal
     wayland
