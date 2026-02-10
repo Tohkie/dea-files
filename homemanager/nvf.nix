@@ -20,16 +20,14 @@ in
     # most settings are documented in the appendix
     settings = {
       vim.viAlias = false;
-      vim.vimAlias = true;
-      vim.lsp = {
-        enable = true;
-      };
-      vim.lazy.plugins.candyland-nvim = {
-        package = candyland-nvim;
-        colorscheme = "candyland-nvim";
-      };
-      vim.theme = {
-        enable = false;
+      vim = {
+        vimAlias = true;
+	lsp.enable = true;
+	extraPlugins.candyland-nvim = {
+          package = candyland-nvim;
+	  setup = "vim.cmd([[colorscheme candyland]])";
+	};
+        theme.enable = false; 
       };
     };
   };
