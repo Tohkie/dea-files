@@ -6,7 +6,8 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
-    nvf.url = "github:notashelf/nvf";
+    # nvf.url = "github:notashelf/nvf";
+    nixcats.url = "github:BirdeeHub/nixCats-nvim";
 
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
@@ -16,9 +17,8 @@
   };
 
   outputs =
-    inputs@{ self, nixpkgs, ... }:
+    inputs@{ self, nixpkgs, nixcats, ... }:
     let
-      system = "x86_64-linux";
       lib = nixpkgs.lib;
 
       commonModules = [

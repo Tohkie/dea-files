@@ -22,12 +22,19 @@ in
       vim.viAlias = false;
       vim = {
         vimAlias = true;
-	lsp.enable = true;
-	extraPlugins.candyland-nvim = {
+        lsp.enable = true;
+        extraPlugins.candyland-nvim = {
           package = candyland-nvim;
-	  setup = "vim.cmd([[colorscheme candyland]])";
-	};
-        theme.enable = false; 
+          setup = "vim.cmd([[colorscheme candyland]])";
+        };
+        notes = {
+          orgmode = {
+            enable = true;
+            treesitter.enable = true;
+          };
+          todo-comments.enable = true;
+        };
+        theme.enable = false;
       };
     };
   };

@@ -1,0 +1,5 @@
+return {
+  {
+    "dressing.nvim"
+  },
+}

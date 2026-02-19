@@ -131,6 +131,7 @@
     unzip
     chawan # tui browser cha <url>
     git
+    gcc
     gdb
     glibc.static
     nixfmt
@@ -166,6 +167,7 @@
 
     bottles # windows emulation
 
+    element-desktop # element 4 matrix
   ];
 
   # There have been amdgpu issues in 6.10 so you maybe need to revert on the default lts kernel.

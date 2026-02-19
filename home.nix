@@ -5,7 +5,6 @@
   ...
 }:
 
-
 {
   # Enables nix commands + flakes
   nix = {
@@ -36,13 +35,27 @@
   ];
 
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.overlays = [ (import ./exprs/overlay.nix { }) ];
+  nixpkgs.overlays = [
+    (import ./exprs/overlay.nix { })
+    (self: super: {
+      element-desktop = super.element-desktop.overrideAttrs (
+        final: prev: {
+          desktopItems = [
+            ((builtins.elemAt prev.desktopItems 0).override {
+              exec = "element-desktop %u --password-store=\"gnome-libsecret\"";
+            })
+          ];
+        }
+      );
+    })
+  ];
   imports = [
     ./homemanager/mpv.nix
-    ./homemanager/nvf.nix
+    # ./homemanager/nvf.nix
     ./hosts/sandalphon/mcsr/home.nix
+    ./homemanager/vim/nixcats.nix
     inputs.plasma-manager.homeModules.plasma-manager
-    inputs.nvf.homeManagerModules.default
+    # inputs.nvf.homeManagerModules.default
   ];
 
   # dconf.settings = {};
@@ -59,7 +72,8 @@
   #   settings = {
   #     add_newline = true;
 
-  #     format = "$directory\n$character";
+  #     format = ''$directory\n
+  #	$character'';
 
   #     directory = {
   #       truncation_length = 3;

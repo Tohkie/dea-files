@@ -40,8 +40,6 @@ in
         origin = "flathub";
       }
     ];
-    update.onActivation = true;
-    uninstallUnmanaged = true;
   };
 
   environment.systemPackages = with pkgs; [
