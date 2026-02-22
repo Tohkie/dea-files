@@ -1,5 +1,4 @@
 {
-  lib,
   pkgs,
   inputs,
   ...
@@ -51,11 +50,9 @@
   ];
   imports = [
     ./homemanager/mpv.nix
-    # ./homemanager/nvf.nix
     ./hosts/sandalphon/mcsr/home.nix
     ./homemanager/vim/nixcats.nix
     inputs.plasma-manager.homeModules.plasma-manager
-    # inputs.nvf.homeManagerModules.default
   ];
 
   # dconf.settings = {};

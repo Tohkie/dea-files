@@ -10,7 +10,7 @@ let
   nvidiaPackage = config.hardware.nvidia.package;
 in
 {
-  networking.hostName = lib.mkDefault "sandalphon";
+  networking.hostName = lib.mkForce "sandalphon";
 
   # nvidia drivers
   hardware.graphics.enable = true;

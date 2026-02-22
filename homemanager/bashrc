@@ -4,6 +4,8 @@ alias eep='systemctl suspend'
 alias hibernate='systemctl hybrid-sleep'
 alias restart='systemctl reboot'
 alias shutdown='systemctl poweroff'
+alias vim='dvim'
+alias nvim='dvim'
 rebuild() {
     if [ -z "$1" ]
         then

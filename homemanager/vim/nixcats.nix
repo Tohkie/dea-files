@@ -82,7 +82,7 @@ in
               nvim-web-devicons
               base16-nvim
               mini-nvim
-              #orgmode
+              orgmode
 
               (pkgs.vimUtils.buildVimPlugin {
                 pname = "candyland-nvim";

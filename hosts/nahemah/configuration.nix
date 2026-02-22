@@ -1,10 +1,11 @@
 {
+  lib,
   pkgs,
   ...
 }:
 
 {
-  networking.hostName = lib.mkDefault "nahemah";
+  networking.hostName = lib.mkForce "nahemah";
 
   environment.systemPackages = with pkgs; [
 
