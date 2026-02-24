@@ -58,14 +58,17 @@ in
             lang = with pkgs; {
               lua = [
                 lua-language-server
+                stylua
               ];
               nix = [
                 nil
                 nix-doc
+                nixfmt
               ];
               rust = with pkgs; [
                 cargo
                 rust-analyzer
+                rustfmt
               ];
               haskell = with pkgs; [
                 haskell-language-server
@@ -82,7 +85,6 @@ in
               nvim-web-devicons
               base16-nvim
               mini-nvim
-              orgmode
 
               (pkgs.vimUtils.buildVimPlugin {
                 pname = "candyland-nvim";
@@ -100,28 +102,29 @@ in
               nvim-treesitter.withAllGrammars
             ];
           };
-          optionalPlugins = {
-            general = with pkgs.vimPlugins; [
+          optionalPlugins = with pkgs.vimPlugins; {
+            general = [
+              orgmode
             ];
-            ui = with pkgs.vimPlugins; [
+            ui = [
               dressing-nvim
             ];
-            qol = with pkgs.vimPlugins; [
+            qol = [
               undotree
               mini-hipatterns
             ];
-            telescope = with pkgs.vimPlugins; [
+            telescope = [
               telescope-nvim
               telescope-fzf-native-nvim
               telescope-ui-select-nvim
             ];
-            fyler = with pkgs.vimPlugins; [
+            fyler = [
               fyler-nvim
             ];
-            lsp = with pkgs.vimPlugins; [
+            lsp = [
               nvim-lspconfig
             ];
-            completion = with pkgs.vimPlugins; [
+            completion = [
               blink-cmp
               nvim-cmp
               luasnip
@@ -136,7 +139,13 @@ in
               cmp-cmdline-history
               lspkind-nvim
             ];
-            lang = with pkgs.vimPlugins; {
+            format = [
+              conform-nvim
+            ];
+            comment = [
+              comment-nvim
+            ];
+            lang = {
             };
           };
 
@@ -187,6 +196,8 @@ in
               fyler = true;
               lsp = true;
               completion = true;
+              format = true;
+              comment = true;
               treesitter = true;
 
               lang = {
