@@ -1,7 +1,7 @@
 # options: https://github.com/nvim-orgmode/orgmode/blob/master/docs/installation.org
 return {
 	{
-		"nvim-orgmode/orgmode",
+		"orgmode",
 		event = { "FileType" },
 		ft = { "org" },
 		after = function(plugin)

@@ -5,13 +5,14 @@
 }:
 
 {
-  # Enables nix commands + flakes
-  nix = {
-    settings.extra-experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
-  };
+  # Enables nix commands + flakes - set in configuration.nix
+  # nix = {
+  #   settings.extra-experimental-features = [
+  #     "nix-command"
+  #     "flakes"
+  #     "pipe-operators"
+  #   ];
+  # };
 
   # Home manager things
   home.username = "dea";
@@ -64,26 +65,11 @@
     bashrcExtra = builtins.readFile ./homemanager/bashrc;
   };
 
-  # programs.starship = {
-  #   enable = true;
-  #   settings = {
-  #     add_newline = true;
-
-  #     format = ''$directory\n
-  #	$character'';
-
-  #     directory = {
-  #       truncation_length = 3;
-  #       truncate_to_repo = false;
-  #       format = "[$path]($style) [❤](bold fg:#ff5fff) ";
-  #       style = "bold cyan";
-  #     };
-  #     character = {
-  #       success_symbol = "";
-  #       error_symbol = "";
-  #     };
-  #   };
-  # };
+  programs.starship = {
+    enable = true;
+    settings = builtins.readFile ./homemanager/starship.toml
+            |> builtins.fromTOML;
+  };
 
   programs.plasma = {
     enable = true;

@@ -110,6 +110,7 @@
   nix.settings.extra-experimental-features = [
     "nix-command"
     "flakes"
+    "pipe-operators"
   ];
 
   # ======================
