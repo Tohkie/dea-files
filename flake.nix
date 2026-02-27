@@ -14,6 +14,10 @@
       inputs.home-manager.follows = "home-manager";
     };
   };
+  
+  nixConfig = {
+    extra-experimental-features = "pipe-operators";
+  };
 
   outputs =
     inputs@{ self, nixpkgs, nixcats, ... }:
