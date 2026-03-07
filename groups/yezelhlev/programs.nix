@@ -21,6 +21,7 @@
     croc # e2ee file transfer
     chawan # tui browser cha <url>
     shellcheck # sh warning
+    calcure # calendar app TODO: remove & fork calendar.vim
 
     # editors
     lunarvim

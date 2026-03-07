@@ -85,6 +85,7 @@ in
               nvim-web-devicons
               base16-nvim
               mini-nvim
+              calendar-vim
 
               (pkgs.vimUtils.buildVimPlugin {
                 pname = "candyland-nvim";
