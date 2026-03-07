@@ -26,8 +26,6 @@
     kitty # terminal
     wayland
 
-    emacs # calander/todo list
-
     nemo # file browser
     monophony # yt music tryout
 
