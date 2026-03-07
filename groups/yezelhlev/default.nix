@@ -4,6 +4,7 @@
   ...
 }: {
   imports = [
+    ./programs.nix
     /${root}/hosts/modules/steam.nix
   ];
 
@@ -61,6 +62,20 @@
     clean.enable = true;
     clean.extraArgs = "--keep-since 7d --keep 3";
     flake = "/home/dea/dea-files"; # sets NH_OS_FLAKE variable for you
+  };
+
+  users.users.dea = {
+    description = "dea";
+    isNormalUser = true;
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "docker"
+    ];
+    packages = with pkgs; [
+      kdePackages.kate
+      #  thunderbird
+    ];
   };
 
   # Better alternative to the standard ssh-agent
