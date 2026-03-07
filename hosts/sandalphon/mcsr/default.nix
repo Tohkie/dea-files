@@ -1,1 +1,1 @@
-{ }
+import ./home.nix

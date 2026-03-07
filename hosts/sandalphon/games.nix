@@ -1,14 +1,10 @@
-{ pkgs, ... }:
-
-{
-  imports = [ ./mcsr ];
-
+{upkgs, ...}: {
   # hardware = {
   #   xone.enable = true;
   #   xpadneo.enable = true;
   # };
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with upkgs; [
     prismlauncher # minecraft
     r2modman
     # osu-lazer-bin
@@ -19,7 +15,7 @@
   programs = {
     obs-studio = {
       enable = true;
-      plugins = with pkgs.obs-studio-plugins; [
+      plugins = with upkgs.obs-studio-plugins; [
         obs-pipewire-audio-capture
       ];
     };
