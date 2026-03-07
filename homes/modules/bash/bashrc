@@ -1,0 +1,3 @@
+eval "$(starship init bash)"
+
+[ -f "/home/dea/.ghcup/env" ] && . "/home/dea/.ghcup/env" # ghcup-env
