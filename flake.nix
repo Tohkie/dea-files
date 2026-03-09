@@ -26,6 +26,12 @@
       url = "github:SteamClientHomebrew/millennium?dir=packages/nix";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.home-manager.follows = "home-manager-unstable";
+    };
   };
 
   outputs = {cerulean, ...} @ inputs:

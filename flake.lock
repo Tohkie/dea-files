@@ -586,7 +586,8 @@
         "nixpkgs": "nixpkgs_2",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "plasma-manager": "plasma-manager",
-        "systems": "systems_3"
+        "systems": "systems_3",
+        "zen-browser": "zen-browser"
       }
     },
     "sops-nix": {
@@ -726,6 +727,29 @@
         "owner": "zaphoyd",
         "ref": "0.8.2",
         "repo": "websocketpp",
+        "type": "github"
+      }
+    },
+    "zen-browser": {
+      "inputs": {
+        "home-manager": [
+          "home-manager-unstable"
+        ],
+        "nixpkgs": [
+          "nixpkgs-unstable"
+        ]
+      },
+      "locked": {
+        "lastModified": 1772945022,
+        "narHash": "sha256-Fv14NttjL/7xfi6eVwrSEBAyBvDjI00RLiRNqA5apcw=",
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
+        "rev": "3a6a5ca7fb48cc8fd8183386506a06579d1d79dc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
         "type": "github"
       }
     },
