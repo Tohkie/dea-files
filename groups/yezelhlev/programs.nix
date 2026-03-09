@@ -38,8 +38,7 @@
     wayland
 
     # programs 
-    vivaldi # vivaldi install requires qt5
-    zen # TODO: switch to better browser
+    vivaldi # TODO: switch to zen later
     vesktop # discord-canary
     equibop # equibop 3.1.7
     element-desktop # element 4 matrix

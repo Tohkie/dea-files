@@ -5,12 +5,13 @@
   ...
 }: {
   imports = [
-    inputs.plasma-manager.homeModules.plasma-manager
+    inputs.plasma-manager.homeModules.plasma-manager # 
 
     /${root}/homes/modules/bash
     /${root}/homes/modules/starship
     /${root}/homes/modules/vim
     /${root}/homes/modules/mpv
+    /${root}/homes/modules/zen
   ];
 
   home.username = "dea";
