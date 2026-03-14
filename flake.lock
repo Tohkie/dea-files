@@ -48,15 +48,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1772852754,
-        "narHash": "sha256-rYmaW2+zmFXM7Mp+B/fsBkzbAoeApj04F1fSmiS3mXU=",
+        "lastModified": 1772502315,
+        "narHash": "sha256-DHE6jU97GZ+QfUdPi4plZRnXtAvtGubOxqA5sQ4DD9M=",
         "owner": "cry128",
         "repo": "cerulean",
-        "rev": "ef5bc338566670380ceec75eb692697c9e81fb7e",
+        "rev": "9bab917d8cc3b16f3c73b1980fcb55a4b5ce5239",
         "type": "github"
       },
       "original": {
         "owner": "cry128",
+        "ref": "v0.2.4-alpha",
         "repo": "cerulean",
         "type": "github"
       }
@@ -598,11 +599,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1772495394,
-        "narHash": "sha256-hmIvE/slLKEFKNEJz27IZ8BKlAaZDcjIHmkZ7GCEjfw=",
+        "lastModified": 1773096132,
+        "narHash": "sha256-M3zEnq9OElB7zqc+mjgPlByPm1O5t2fbUrH3t/Hm5Ag=",
         "owner": "Mic92",
         "repo": "sops-nix",
-        "rev": "1d9b98a29a45abe9c4d3174bd36de9f28755e3ff",
+        "rev": "d1ff3b1034d5bab5d7d8086a7803c5a5968cd784",
         "type": "github"
       },
       "original": {
