@@ -33,10 +33,10 @@
       inputs.home-manager.follows = "home-manager-unstable";
     };
 
-    mangown = {
+    mangowm = {
       url = "github:mangowm/mango";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
-    }
+    };
 };
   
   nixConfig = {

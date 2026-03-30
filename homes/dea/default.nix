@@ -7,11 +7,13 @@
   imports = [
     inputs.plasma-manager.homeModules.plasma-manager # 
 
+    #/${root}/homes/modules/shell
     /${root}/homes/modules/bash
     /${root}/homes/modules/starship
     /${root}/homes/modules/vim
     /${root}/homes/modules/mpv
     /${root}/homes/modules/zen
+    /${root}/homes/modules/wm
   ];
 
   home.username = "dea";

@@ -6,6 +6,7 @@
     args = {inherit inputs;};
     modules = [
       inputs.nix-flatpak.nixosModules.nix-flatpak
+      inputs.mangowm.nixosModules.mango
     ];
 
     groups = {
