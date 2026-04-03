@@ -64,6 +64,10 @@
     flake = "/home/dea/dea-files"; # sets NH_OS_FLAKE variable for you
   };
 
+  programs.mangowm = {
+    enable = false; # TODO: enable mango after configuring
+  };
+
   users.users.dea = {
     description = "dea";
     isNormalUser = true;
