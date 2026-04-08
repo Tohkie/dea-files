@@ -33,7 +33,7 @@ local mc_eye_y = (tall_h - mc_eye_h) / 2
 -- https://github.com/Esensats/mcsr-calcsens
 local normal_sens = 4.699455756166794
 local tall_sens = 0.31702247418659996
-
+-- 0.0229116492
 
 local left_middle = (resolution.w - thin_w) / 4
 scene:register("e_counter", {

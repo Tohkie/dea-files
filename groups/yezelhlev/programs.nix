@@ -24,7 +24,7 @@
     calcure # calendar app TODO: remove & fork calendar.vim
 
     # editors
-    lunarvim
+    #lunarvim
     vscode
 
     # languages
