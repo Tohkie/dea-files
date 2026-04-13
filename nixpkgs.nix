@@ -3,9 +3,11 @@
   system,
   ...
 } @ args: {
-  nixpkgs.channels = {
-    default = {
+  nixpkgs.channels = rec {
+    base = spkgs;
+    spkgs= {
       inherit system;
+      source = inputs.nixpkgs;
       overlays = [
         (import ./overlays args)
       ];

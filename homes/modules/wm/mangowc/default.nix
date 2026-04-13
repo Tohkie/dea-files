@@ -8,7 +8,7 @@
   systemd = {
     enable = true;
     xdgAutostart = true;
-  }
+  };
   
   settings = builtins.readFile ./mango.conf; 
 }

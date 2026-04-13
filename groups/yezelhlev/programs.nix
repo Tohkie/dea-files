@@ -12,6 +12,7 @@
   environment.systemPackages = with upkgs; [
     # CLI tools
     git
+    lazygit
     wget
     unzip
     p7zip
@@ -36,6 +37,8 @@
 
     # window management
     wayland
+    waywall
+    pipewire
 
     # programs 
     vivaldi # TODO: switch to zen later
