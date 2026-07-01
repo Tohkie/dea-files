@@ -7,7 +7,7 @@
   environment.systemPackages = with upkgs; [
     prismlauncher # minecraft
     r2modman
-    # osu-lazer-bin
+    osu-lazer-bin
     waywall
     glfw3-minecraft
   ];
