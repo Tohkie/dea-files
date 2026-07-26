@@ -15,9 +15,6 @@
       config = {
         allowUnfree = true;
         allowBroken = false;
-        permittedInsecurePackages = [
-          "pnpm-10.29.2"
-        ];
       };
     };
 
@@ -32,9 +29,6 @@
       config = {
         allowUnfree = true;
         allowBroken = false;
-        permittedInsecurePackages = [
-          "pnpm-10.29.2"
-        ];
       };
     };
   };
