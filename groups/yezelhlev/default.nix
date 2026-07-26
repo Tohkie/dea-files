@@ -1,6 +1,7 @@
 {
   pkgs,
   root,
+  lib, # temp call for services.displayManager.sddm.wayland.enable
   ...
 }: {
   imports = [
@@ -17,7 +18,7 @@
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm = {
     enable = true;
-    wayland.enable = true;
+    wayland.enable = lib.mkDefault true;
   };
 
   services.desktopManager.plasma6.enable = true;
