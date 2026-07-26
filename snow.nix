@@ -6,7 +6,8 @@
     args = {inherit inputs;};
     modules = [
       inputs.nix-flatpak.nixosModules.nix-flatpak
-      inputs.mangowm.nixosModules.mango
+      inputs.sddm-silent.nixosModules.default
+      inputs.mango.nixosModules.mango
     ];
 
     groups = {

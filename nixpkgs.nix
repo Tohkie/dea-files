@@ -2,10 +2,11 @@
   inputs,
   system,
   ...
-} @ args: {
+}@args:
+{
   nixpkgs.channels = rec {
     base = spkgs;
-    spkgs= {
+    spkgs = {
       inherit system;
       source = inputs.nixpkgs;
       overlays = [
@@ -14,6 +15,9 @@
       config = {
         allowUnfree = true;
         allowBroken = false;
+        permittedInsecurePackages = [
+          "pnpm-10.29.2"
+        ];
       };
     };
 
@@ -28,6 +32,9 @@
       config = {
         allowUnfree = true;
         allowBroken = false;
+        permittedInsecurePackages = [
+          "pnpm-10.29.2"
+        ];
       };
     };
   };

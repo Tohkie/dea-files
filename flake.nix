@@ -9,7 +9,7 @@
     home-manager-unstable.url = "github:nix-community/home-manager";
     home-manager-unstable.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
-    cerulean.url = "github:cry128/cerulean/v0.2.4-alpha";
+    cerulean.url = "github:cry128/cerulean/refactor/snowflake";
     cerulean.inputs.systems.follows = "systems";
     cerulean.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
@@ -33,8 +33,13 @@
       inputs.home-manager.follows = "home-manager-unstable";
     };
 
-    mangowm = {
+    mango = {
       url = "github:mangowm/mango";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+
+    sddm-silent = {
+      url = "github:uiriansan/SilentSDDM";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 };

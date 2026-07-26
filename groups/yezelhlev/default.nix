@@ -15,7 +15,11 @@
     variant = "";
   };
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+  };
+
   services.desktopManager.plasma6.enable = true;
 
   # Enable CUPS to print documents.
@@ -64,8 +68,16 @@
     flake = "/home/dea/dea-files"; # sets NH_OS_FLAKE variable for you
   };
 
-  programs.mangowm = {
+  programs.mango = {
     enable = false; # TODO: enable mango after configuring
+  };
+
+  programs.silentSDDM = {
+    enable = true;
+    theme = "rei";
+    backgrounds.dea = /${root}/assets/wallpapers/home.jpg;
+    profileIcons.dea = /${root}/assets/pfps/happy.jpg;
+    settings = { };
   };
 
   users.users.dea = {

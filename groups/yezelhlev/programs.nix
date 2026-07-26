@@ -25,7 +25,6 @@
     calcure # calendar app TODO: remove & fork calendar.vim
 
     # editors
-    lunarvim
     vscode
 
     # languages
@@ -55,10 +54,10 @@
     bottles # windows emulation
 
     # dependencies 
-    qt5.qtbase # vivaldi + others
+    libsForQt5.qtbase # vivaldi + others
     libsForQt5.qtstyleplugin-kvantum # libs for Qt5
     libsForQt5.qt5ct
-    libsForQt5.qt5.qtbase
+    qt5.qtbase
 
     hunspell # spellcheck for libreoffice
     hunspellDicts.uk_UA
