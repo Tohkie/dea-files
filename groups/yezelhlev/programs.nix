@@ -18,11 +18,15 @@
     p7zip
     kitty # terminal
     starship # shell customizer
+    tree
     btop-cuda # system monitoring
     croc # e2ee file transfer
     chawan # tui browser cha <url>
     shellcheck # sh warning
     calcure # calendar app TODO: remove & fork calendar.vim
+    
+    # fonts
+    nerd-fonts.droid-sans-mono
 
     # editors
     vscode
