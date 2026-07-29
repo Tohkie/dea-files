@@ -79,7 +79,6 @@
       };
       "LoginScreen.MenuArea.Buttons" = {
         font-family = "DroidSansM Nerd Font";
-        margin-top = 200;
       };
       "LoginScreen.MenuArea.Popups" = {
         font-family = "DroidSansM Nerd Font";
