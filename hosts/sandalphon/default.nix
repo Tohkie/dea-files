@@ -23,7 +23,7 @@
     powerManagement.finegrained = false;
   };
 
-  # desktop theming
+  # lock screen theming
   programs.silentSDDM = {
     backgrounds.dea = /${root}/assets/wallpapers/lock.png;
     profileIcons.dea = /${root}/assets/pfps/happy.jpg;
@@ -69,7 +69,7 @@
       };
       "LoginScreen.LoginArea.PasswordInput" = {
         font-family = "DroidSansM Nerd Font";
-        width = 256;
+        width = 216;
       };
       "LoginScreen.LoginArea.Spinner" = {
         font-family = "DroidSansM Nerd Font";

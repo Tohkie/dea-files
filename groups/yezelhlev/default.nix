@@ -76,8 +76,6 @@
   programs.silentSDDM = {
     enable = true;
     theme = "default";
-    # backgrounds.dea = /${root}/assets/wallpapers/home.jpg;
-    # profileIcons.dea = /${root}/assets/pfps/happy.jpg;
   };
 
   users.users.dea = {
