@@ -44,7 +44,8 @@
 
   services.mullvad-vpn = {
     enable = true;
-    package = pkgs.mullvad-vpn; # mullvad only has the cli
+    gui.enable = true;
+    # package = pkgs.mullvad-vpn; # mullvad only has the cli
   };
 
   # Enable docker virtualisation.
@@ -77,6 +78,11 @@
     enable = true;
     theme = "default";
   };
+
+  # stylix = {
+  #   enable = true;
+  #   image = /${root}/assets/wallpapers/lantern.png;
+  # };
 
   users.users.dea = {
     description = "dea";
