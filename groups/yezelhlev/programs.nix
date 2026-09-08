@@ -50,6 +50,8 @@
     dunst
     wl-clipboard
     wlsunset
+    playerctl
+    grim
 
     # programs 
     vivaldi # TODO: switch to zen later

@@ -13,12 +13,9 @@
       xdgAutostart = true;
     };
     
+    autostart_sh = " ";
+
     settings = { }; 
     extraConfigs = builtins.readFile ./mango.conf; 
-  };
-
-  xdg.config."mango" = {
-    recursive = true;
-    source = ./config;
   };
 }
