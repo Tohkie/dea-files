@@ -1,7 +1,7 @@
 {
   pkgs,
   root,
-  lib, # temp call for services.displayManager.sddm.wayland.enable
+  lib, 
   ...
 }: {
   imports = [
@@ -15,6 +15,7 @@
     layout = "us";
     variant = "";
   };
+
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm = {
     enable = true;
@@ -71,7 +72,7 @@
   };
 
   programs.mango = {
-    enable = false; # TODO: enable mango after configuring
+    enable = true; 
   };
 
   programs.silentSDDM = {

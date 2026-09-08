@@ -16,6 +16,7 @@
     wget
     unzip
     p7zip
+    rofi
     kitty # terminal
     starship # shell customizer
     tree
@@ -42,6 +43,13 @@
     wayland
     waywall
     pipewire
+    waybar
+    noctalia
+    awww
+    xdg-desktop-portal
+    dunst
+    wl-clipboard
+    wlsunset
 
     # programs 
     vivaldi # TODO: switch to zen later
