@@ -13,6 +13,21 @@
   networking.networkmanager.enable = true;
   networking.nftables.enable = true; # firewall
   networking.firewall.enable = true;
+  # networking.wireless.enable = true;
+  networking.networkmanager.logLevel = "INFO";
+  networking.networkmanager.wifi.scanRandMacAddress = false;
+
+  # hi dea - edward
+  networking.networkmanager.wifi.powersave = false;
+  networking.networkmanager.connectionConfig = {
+    "wifi.bgscan" = "simple:30:-70:300";
+    "wifi.cloned-mac-address" = lib.mkForce "permanent";
+  };
+  boot.extraModprobeConfig = ''
+   options rtw88_core disable_lps_deep=y
+   options rtw88_pci disable_msi=y disable_aspm=y
+   options rtw88_8822ce disable_lps_deep=y
+  '';
 
   time.timeZone = lib.mkDefault "America/New_York";
   i18n.defaultLocale = lib.mkDefault "en_US.UTF-8";

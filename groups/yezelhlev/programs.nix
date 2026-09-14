@@ -26,6 +26,9 @@
     shellcheck # sh warning
     calcure # calendar app TODO: remove & fork calendar.vim
     
+    iw
+    pciutils
+
     # fonts
     nerd-fonts.droid-sans-mono
 
