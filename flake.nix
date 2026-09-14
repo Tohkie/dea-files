@@ -52,8 +52,8 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
-};
-  
+  };
+
   nixConfig = {
     extra-experimental-features = "pipe-operators";
   };
