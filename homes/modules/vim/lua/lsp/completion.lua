@@ -15,7 +15,9 @@ return {
 
       blink.setup({
         keymap = {
-	  preset = 'default',
+	        preset = 'default',
+
+          ["<Tab>"] = { "select_and_accept", "fallback" },
         },
 
         appearance = {

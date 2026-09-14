@@ -7,7 +7,6 @@
     modules = [
       inputs.nix-flatpak.nixosModules.nix-flatpak
       inputs.sddm-silent.nixosModules.default
-      inputs.stylix.nixosModules.stylix
       inputs.mango.nixosModules.mango
     ];
 

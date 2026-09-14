@@ -35,9 +35,10 @@
 
     alsa.enable = true;
     alsa.support32Bit = true;
-    # pulse.enable = true;
-    # jack.enable = true;
+    pulse.enable = true;
+    jack.enable = true;
   };
+  services.pulseaudio.enable = false;
 
   security.polkit.enable = true;
 
@@ -79,11 +80,6 @@
     enable = true;
     theme = "default";
   };
-
-  # stylix = {
-  #   enable = true;
-  #   image = /${root}/assets/wallpapers/lantern.png;
-  # };
 
   users.users.dea = {
     description = "dea";

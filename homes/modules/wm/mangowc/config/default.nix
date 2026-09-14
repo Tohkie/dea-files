@@ -7,15 +7,19 @@
 
   wayland.windowManager.mango = {
     enable = true;
-    
+ 
     systemd = {
       enable = true;
       xdgAutostart = true;
     };
     
-    autostart_sh = " ";
+    settings = { };
+    extraConfig = builtins.readFile ./mango.conf;
 
-    settings = { }; 
-    extraConfigs = builtins.readFile ./mango.conf; 
+  };
+  
+  xdg.configFile."mango" = {
+    recursive = true;
+    source = ./config;
   };
 }

@@ -63,6 +63,7 @@
     qbittorrent
     libreoffice-qt # libreoffice
     notepad-next # notepad++
+    thunderbird
     # notepadqq # TODO: which is better?
     sqlitebrowser
     bottles # windows emulation
@@ -80,5 +81,7 @@
 
     ffmpeg-full # mpv + syncplay
     yt-dlp
+    footage
+    constrict
   ];
 }
