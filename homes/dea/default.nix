@@ -13,7 +13,7 @@
     /${root}/homes/modules/vim
     /${root}/homes/modules/mpv
     /${root}/homes/modules/zen
-    /${root}/homes/modules/wm
+    /${root}/homes/modules/wm/mangowc
   ];
 
   home.username = "dea";
