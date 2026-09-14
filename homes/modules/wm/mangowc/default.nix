@@ -14,10 +14,10 @@
     };
     
     settings = { }; 
-    extraConfigs = builtins.readFile ./mango.conf; 
+    extraConfig = builtins.readFile ./mango.conf; 
   };
 
-  xdg.config."mango" = {
+  xdg.configFile."mango" = {
     recursive = true;
     source = ./config;
   };
