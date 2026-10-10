@@ -7,6 +7,7 @@
   imports = [
     ./programs.nix
     /${root}/hosts/modules/steam.nix
+    /${root}/hosts/modules/dunst.nix
   ];
 
   # Configure keymap in X11

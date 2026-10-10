@@ -14,7 +14,11 @@
     };
     
     settings = { }; 
-    extraConfig = builtins.readFile ./mango.conf; 
+    extraConfig = ''
+      ${builtins.readFile ./mango.conf}
+      ${builtins.readFile ./config/theme.conf}
+      ${builtins.readFile ./config/binds.conf}
+    '';
   };
 
   xdg.configFile."mango" = {

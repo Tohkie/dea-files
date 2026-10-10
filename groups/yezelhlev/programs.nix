@@ -42,16 +42,17 @@
     # window management
     wayland
     waywall
-    pipewire
-    waybar
-    noctalia
-    awww
-    xdg-desktop-portal
-    dunst
-    wl-clipboard
-    wlsunset
-    playerctl
-    grim
+    pipewire               # audio
+    waybar                 # bar
+    noctalia               # desktop shell
+    awww                   # wallpaper daemon
+    xdg-desktop-portal-wlr # wlr display + screenshare
+    slurp                  # cropping screenshots
+    dunst                  # notification daemon
+    wl-clipboard           # clipboard obv
+    wlsunset               # gamma for day/night cycles
+    playerctl              # media players 
+    grim                   # image clipboard
 
     # programs 
     vivaldi # TODO: switch to zen later

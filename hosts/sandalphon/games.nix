@@ -8,7 +8,7 @@
     prismlauncher # minecraft
     r2modman
     osu-lazer-bin
-    waywall
+    # waywall # bundled into groups/yezelhlev
     glfw3-minecraft
     
     # strinova
