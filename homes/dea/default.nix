@@ -14,7 +14,7 @@
     /${root}/homes/modules/mpv
     /${root}/homes/modules/zen
     /${root}/homes/modules/wm/mangowc
-    #/${root}/homes/modules/dunst
+    /${root}/homes/modules/dunst
   ];
 
   home.username = "dea";

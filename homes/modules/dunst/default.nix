@@ -1,14 +1,15 @@
-{ upkgs, ... }:
+{ ... }:
 
 {
-  environment.systemPackages = with upkgs; [
-    libnotify
-  ];
-
   services.dunst = {
     enable = true;
+    
+    # iconTheme = {
+    #   
+    # };
+
     settings = {
-      gloabl = {
+      global = {
         origin = "";
         layer = "top";
         offset = "(16, 24)";
@@ -23,7 +24,7 @@
         icon_corner_radius = 12;
 
         progress_bar = true;
-        progress_bar_heigh = 16;
+        progress_bar_height = 16;
       };
     };
   };

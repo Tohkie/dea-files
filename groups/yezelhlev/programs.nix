@@ -49,6 +49,7 @@
     xdg-desktop-portal-wlr # wlr display + screenshare
     slurp                  # cropping screenshots
     dunst                  # notification daemon
+    libnotify              # notification lib
     wl-clipboard           # clipboard obv
     wlsunset               # gamma for day/night cycles
     playerctl              # media players 
