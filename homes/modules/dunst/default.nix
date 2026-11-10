@@ -17,6 +17,7 @@
         padding = 4;
         gap_size = 4;
         frame_width = 2;
+        frame_color = "#14161b";
 
         font = "DroidSansM Nerd Font Mono 10";
 
@@ -25,6 +26,14 @@
 
         progress_bar = true;
         progress_bar_height = 16;
+
+        mouse_left_click = "do_action";
+      };
+
+      urgency_normal = {
+        background = "#14161b";
+        foreground = "#FFFFFF";
+        timeout = 5;
       };
     };
   };
