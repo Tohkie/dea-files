@@ -15,6 +15,7 @@
     /${root}/homes/modules/zen
     /${root}/homes/modules/wm/mangowc
     /${root}/homes/modules/dunst
+    /${root}/homes/modules/kitty
   ];
 
   home.username = "dea";

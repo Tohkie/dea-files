@@ -13,6 +13,17 @@
   networking.networkmanager.enable = true;
   networking.nftables.enable = true; # firewall
   networking.firewall.enable = true;
+ 
+  # settings for cs2
+  networking.wireless.iwd.enable = true;
+  networking.networkmanager.wifi.backend = "iwd";
+  boot.extraModprobeConfig = ''
+    options iwlwifi power_save=0
+    options iwlwifi uapsd_disable=1
+    options iwlwifi disable_11ax=1
+    options iwlmvm power_scheme=1
+  '';
+  
 
   time.timeZone = lib.mkDefault "America/New_York";
   i18n.defaultLocale = lib.mkDefault "en_US.UTF-8";

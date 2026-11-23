@@ -27,7 +27,7 @@
         progress_bar = true;
         progress_bar_height = 16;
 
-        mouse_left_click = "do_action";
+        mouse_left_click = "do_action, remove_current";
       };
 
       urgency_normal = {
