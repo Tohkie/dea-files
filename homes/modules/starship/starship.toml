@@ -13,7 +13,7 @@ $character"""
 truncation_length = 3
 truncate_to_repo = false
 format = "[$path]($style) [❤](bold fg:207) "
-style = "bold cyan"
+style = "bold #e7bcd2"
 
 [character]
 success_symbol = ""
