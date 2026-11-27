@@ -4,17 +4,13 @@
   services.dunst = {
     enable = true;
     
-    # iconTheme = {
-    #   
-    # };
-
     settings = {
       global = {
-        origin = "";
-        layer = "top";
+        origin = "top-right";
+        layer = "overlay";
         offset = "(16, 24)";
 
-        padding = 4;
+        padding = 10;
         gap_size = 4;
         frame_width = 2;
         frame_color = "#14161b";
@@ -23,6 +19,7 @@
 
         corner_radius = 12;
         icon_corner_radius = 12;
+        show_indicators = false;
 
         progress_bar = true;
         progress_bar_height = 16;
